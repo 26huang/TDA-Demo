@@ -95,7 +95,7 @@ def get_chain(refresh_file, access_file, config_file, symbol, save=0):
         
         
 if __name__ == "__main__":
-    get_quote(refresh_file, access_file, config_file, "amzn", save=1)
+    get_quote(refresh_file, access_file, config_file, "AMZN", save=1)
     get_chain(refresh_file, access_file, config_file, "AMZN", save=1)
         
         
