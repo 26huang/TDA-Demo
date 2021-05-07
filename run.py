@@ -68,7 +68,7 @@ def get_quote(refresh_file, access_file, config_file, symbol, save=0):
     
     parameters = {}
     
-    response = requests.get(url=endpoint, headers=payload, params=parameters).json()
+    response = requests.get(url=endpoint.format(symbol), headers=payload, params=parameters).json()
     if save:
         with open('./Data/{}_quote_{}.json'.format(symbol, datetime.datetime.today().strftime('%Y%m%d_%H%M%S')), 'w') as working_data:
             json.dump(response, working_data)
